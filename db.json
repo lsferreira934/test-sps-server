@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": "dbc37e0b-8856-4802-88d0-d1c887252923",
+      "name": "admin",
+      "email": "admin@spsgroup.com.br",
+      "type": "admin",
+      "active": true
+    },
+    {
+      "id": "3043a7ff-571a-4929-9d96-0083cdaa2ee1",
+      "name": "Leandro da Silva Ferreira",
+      "email": "leandro@spsgroup.com.br",
+      "type": "default",
+      "password": "1234",
+      "active": false
+    }
+  ],
+  "tokens": []
+}
