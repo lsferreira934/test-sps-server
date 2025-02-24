@@ -2,6 +2,7 @@ import { Router } from "express";
 const userRouter = Router();
 
 import { checkTokenIsValid } from "../middleware/mwCheckTokenIsValid.js";
+import { mwCheckIsRoleAdmin } from "../middleware/mwCheckIsRoleAdmin.js";
 import {
   createUser,
   deleteUser,
@@ -10,11 +11,9 @@ import {
   updateUser,
 } from "../controllers/userControllers.js";
 
-const middlewares = [checkTokenIsValid];
-
-userRouter.get("/users", middlewares, getUsers);
-userRouter.get("/user/:id", middlewares, getUser);
-userRouter.post("/user", middlewares, createUser);
-userRouter.put("/user/:id", middlewares, updateUser);
-userRouter.delete("/user/:id", middlewares, deleteUser);
+userRouter.get("/users", checkTokenIsValid, getUsers);
+userRouter.get("/user/:id", [checkTokenIsValid, mwCheckIsRoleAdmin], getUser);
+userRouter.post("/user", [checkTokenIsValid, mwCheckIsRoleAdmin], createUser);
+userRouter.put("/user/:id", [checkTokenIsValid, mwCheckIsRoleAdmin], updateUser);
+userRouter.delete("/user/:id", [checkTokenIsValid, mwCheckIsRoleAdmin], deleteUser);
 export default userRouter;
