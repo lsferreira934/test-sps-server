@@ -2,7 +2,10 @@ import { hasTokenInBlacklist } from "../service/tokenService.js";
 import jwt from "jsonwebtoken";
 
 export const checkTokenIsValid = async (req, res, next) => {
-  const token = req.headers["x-access-token"];
+  if(!req.headers["authorization"] || !req.headers["authorization"].includes("Bearer ")) return res.status(500).end();
+  
+  const token = req.headers["authorization"].replace('Bearer ', '');
+
   if (!token) return res.status(401).json({ error: "Token invalid" });
 
   const isTokenInBlacklist = await hasTokenInBlacklist(token);
