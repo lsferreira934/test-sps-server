@@ -6,7 +6,7 @@ import {
 import { insertTokenBlacklist } from "../service/tokenService.js";
 
 export const register = async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password } = req.body.values;
 
   if (!name && !email && !password)
     return res.status(404).json({ error: "Data not found" });
@@ -27,7 +27,7 @@ export const register = async (req, res) => {
 };
 
 export const login = async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password } = req.body.values;
 
   if (!email && !password)
     return res.status(400).json({ error: "Email or password is required" });
@@ -53,7 +53,8 @@ export const login = async (req, res) => {
 
 export const logout = async (req, res) => {
   try {
-    const token = req.headers["x-access-token"];
+    if(!req.headers["authorization"] || !req.headers["authorization"].includes("Bearer ")) return res.status(500).end();
+    const token = req.headers["authorization"].replace("Bearer ", "");
 
     await insertTokenBlacklist(token);
 

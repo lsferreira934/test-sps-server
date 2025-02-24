@@ -8,7 +8,7 @@ import {
 } from "../service/userService.js";
 
 export const createUser = async (req, res) => {
-  const { name, email, password, type } = req.body;
+  const { name, email, password, type } = req.body.values;
 
   if (!name || !email || !password || !type) {
     return res.status(400).json({ error: "All fields are required." });
@@ -16,7 +16,7 @@ export const createUser = async (req, res) => {
 
   try {
     const hasUser = await getUserByEmailService(email);
-    console.log(hasUser)
+
     if (hasUser) {
       return res.status(409).json({ error: "User already registered." });
     }
@@ -62,16 +62,23 @@ export const getUser = async (req, res) => {
 
 export const updateUser = async (req, res) => {
   const { id } = req.params;
-  const { name, email, password, type } = req.body;
+  const { name, email, password, type } = req.body.values;
 
-  if (!name && !email && !password && !type) {
+  if (!name && !email && !type) {
     return res
       .status(400)
       .json({ error: "At least one field is required for update." });
   }
 
   try {
-    const user = await updateUserService(id, { name, email, password, type });
+    const saveData = {
+      name,
+      email,
+      type,
+    };
+    if (password) saveData.password = password;
+
+    const user = await updateUserService(id, saveData);
     if (!user) {
       return res.status(404).json({ error: "User not found." });
     }
