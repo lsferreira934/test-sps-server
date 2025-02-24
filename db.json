@@ -7,60 +7,9 @@
       "type": "admin",
       "password": "1234",
       "active": true
-    },
-    {
-      "id": "3043a7ff-571a-4929-9d96-0083cdaa2ee1",
-      "name": "Leandro Ferreira",
-      "email": "leandro@spsgroup.com.br",
-      "type": "default",
-      "password": "12345",
-      "active": true
-    },
-    {
-      "id": "95fc59b5-9d51-47dc-98bb-dfd521842509",
-      "name": "Felipe",
-      "email": "felipe@email.com",
-      "type": "default",
-      "password": "12345",
-      "active": true
     }
   ],
   "tokens": [
-    {
-      "id": "de399186-d01d-44e5-a552-5ec96b43c5d8",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRiYzM3ZTBiLTg4NTYtNDgwMi04OGQwLWQxYzg4NzI1MjkyMyIsImlhdCI6MTc0MDM2MjYyMCwiZXhwIjoxNzQwMzY2MjIwfQ.z0tk03XxCiUDvMo2B5FjQopG3wLnj0lXT69V0t1gOlg"
-    },
-    {
-      "id": "b60bcc48-e5f6-4669-901e-4a3b4e0c3673",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRiYzM3ZTBiLTg4NTYtNDgwMi04OGQwLWQxYzg4NzI1MjkyMyIsImlhdCI6MTc0MDM2MjY0MCwiZXhwIjoxNzQwMzY2MjQwfQ.PscRcQ-nObkglTG0jEvL5GtiM4xRc8-v4FOLes6Jeek"
-    },
-    {
-      "id": "cbed6d70-88bb-45ee-bc7d-fed9a27c2fa9",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRiYzM3ZTBiLTg4NTYtNDgwMi04OGQwLWQxYzg4NzI1MjkyMyIsImlhdCI6MTc0MDM2MjY3OCwiZXhwIjoxNzQwMzY2Mjc4fQ.Chm3Co0QU67OjVLsHMrZP_FubvsYeJ8QZx04NTF1vg4"
-    },
-    {
-      "id": "d04bf949-1340-43eb-beb1-fda128a80f00",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRiYzM3ZTBiLTg4NTYtNDgwMi04OGQwLWQxYzg4NzI1MjkyMyIsImlhdCI6MTc0MDM2MjczNSwiZXhwIjoxNzQwMzY2MzM1fQ.9P-FWdCWu8NqqKYZe_tBmEnc7hyrYLC6avJIW3hZWOc"
-    },
-    {
-      "id": "03f8be02-b9e2-4d08-8002-bd69be1347b0",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRiYzM3ZTBiLTg4NTYtNDgwMi04OGQwLWQxYzg4NzI1MjkyMyIsImlhdCI6MTc0MDM3MDcwNCwiZXhwIjoxNzQwMzc0MzA0fQ.8DdO3Mnfbs-MH4Cy0Kt8PI4C0l96sHV-EibeY_n976k"
-    },
-    {
-      "id": "5ae39d8a-ab26-4d0a-bf21-31064e2342b3",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRiYzM3ZTBiLTg4NTYtNDgwMi04OGQwLWQxYzg4NzI1MjkyMyIsImlhdCI6MTc0MDM3MjQyOSwiZXhwIjoxNzQwMzc2MDI5fQ.ZhbMYqRJBIUMbu_XkuPoFyg3Xbb5LIh87ckEID0JLTg"
-    },
-    {
-      "id": "b7a4459a-0ada-4694-a916-981c8d2c7d37",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRiYzM3ZTBiLTg4NTYtNDgwMi04OGQwLWQxYzg4NzI1MjkyMyIsImlhdCI6MTc0MDM3MjY0OCwiZXhwIjoxNzQwMzc2MjQ4fQ.M_iFRsknmtJXDt6I7cE4PJq8_QO0nCkVBo92cU30vZE"
-    },
-    {
-      "id": "8a30ab6d-7d1e-4208-8427-69009eafccf5",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRiYzM3ZTBiLTg4NTYtNDgwMi04OGQwLWQxYzg4NzI1MjkyMyIsImlhdCI6MTc0MDM3NDU4NSwiZXhwIjoxNzQwMzc4MTg1fQ.5jJ1DaW_PtoPkHJoGLihZ1sCp-m1jWLSv_a-gS3bGjU"
-    },
-    {
-      "id": "d93b83d7-b7bb-4532-a8db-cc3e0b569610",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRiYzM3ZTBiLTg4NTYtNDgwMi04OGQwLWQxYzg4NzI1MjkyMyIsImlhdCI6MTc0MDM3NTM5MiwiZXhwIjoxNzQwMzc4OTkyfQ.5KTAxGpTZslKAUXQzDrJzsXNoz3d-qPPoLOt4HfR5AA"
-    }
+   
   ]
 }
